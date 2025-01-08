@@ -1,0 +1,10 @@
+#judul{
+    color: blue;
+}
+.text_merah{
+    color: red;
+}
+a[title]{
+    text-decoration: none;
+    color: green;
+}
