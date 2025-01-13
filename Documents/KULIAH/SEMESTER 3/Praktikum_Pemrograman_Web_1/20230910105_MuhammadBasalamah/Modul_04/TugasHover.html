@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Modul 5</title>
+    <style>
+      body {
+        background-color: rgb(252, 215, 239);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 50%;
+        text-align: left;
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      th {
+        background-color: rgb(187, 187, 38);
+        color: white;
+        text-align: center;
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      tr:hover {
+        background-color: rgb(255, 230, 230);
+        cursor: pointer;
+      }
+      .profile-header {
+        font-size: 1.5rem;
+        color: blue;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      #searchInput {
+        margin-top: 10px;
+        padding: 5px;
+        width: 50%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+    </style>
+    <script>
+      function filterTable() {
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const table = document.getElementById("alumniTable");
+        const rows = table.getElementsByTagName("tr");
+        for (let i = 1; i < rows.length; i++) {
+          const cells = rows[i].getElementsByTagName("td");
+          let match = false;
+          for (let j = 1; j < cells.length; j++) {
+            if (cells[j].textContent.toLowerCase().includes(input)) {
+              match = true;
+              break;
+            }
+          }
+          rows[i].style.display = match ? "" : "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <font size="7" style="color: blue">Fakultas Ilmu Komputer</font><br />
+    <font size="5" style="color: rgb(187, 187, 38)">Universitas Kuningan</font> <br />
+    <font size="3">
+      Alamat: Jl. Pramuka No.67, Purwawinangun, Kec. Kuningan, Kabupaten
+      Kuningan, Jawa Barat 45512
+    </font>
+    <hr size="3" />
+    <main class="container">
+      <div>
+        <article>
+          <!-- Tabel Profil Alumni -->
+          <div class="profile-header">Profil Alumni</div>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari berdasarkan nama atau jurusan..."
+            onkeyup="filterTable()"
+          />
+          <table id="alumniTable">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Jurusan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Andrean</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Dede</td>
+                <td>Teknik Informatika</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Muhammad</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Naufal</td>
+                <td>Teknik Informatika</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
