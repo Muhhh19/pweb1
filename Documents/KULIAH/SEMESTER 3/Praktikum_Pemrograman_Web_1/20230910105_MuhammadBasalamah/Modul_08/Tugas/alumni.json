@@ -1,0 +1,30 @@
+[
+    {
+        "name": "muh",
+        "email": "muhbas1903@gmail.com",
+        "phone": "087739716666",
+        "graduation_year": "2023",
+        "current_job": "data analyst"
+    },
+    {
+        "name": "naufal",
+        "email": "naufal2222@gmail.com",
+        "phone": "088876757727",
+        "graduation_year": "2023",
+        "current_job": "data scientist"
+    },
+    {
+        "name": "andre",
+        "email": "andre2023@gmail.com",
+        "phone": "08261023022",
+        "graduation_year": "2022",
+        "current_job": "programmer"
+    },
+    {
+        "name": "Desur",
+        "email": "desur2022@gmail.com",
+        "phone": "088877791142",
+        "graduation_year": "2022",
+        "current_job": "designer"
+    }
+]
